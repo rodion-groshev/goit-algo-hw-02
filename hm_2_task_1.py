@@ -1,3 +1,4 @@
+import time
 from queue import Queue
 import random
 
@@ -23,6 +24,8 @@ while request_id < 100:
     rand = random.randint(0, 1)
     if rand == 1:
         print(generate_request(request_id))
+        time.sleep(0.5)
         request_id += 1
     else:
         print(process_request())
+        time.sleep(0.5)
